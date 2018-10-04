@@ -26,4 +26,14 @@ recognition.addEventListener(results, e => {
       // append each p that is spoken
       words.appendChild(p);
     }
+    // testing words included in transcript
+    if (transcriptSpoken.includes('Hello')) {
+      console.log('HELLLLOOOO');
+    }
+    console.log(transcriptSpoken);
 });
+
+recognition.addEventListener('end', recognition.start);
+
+// start the app
+recognition.start();
